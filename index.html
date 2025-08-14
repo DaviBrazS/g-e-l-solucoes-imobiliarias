@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G & L Soluções Imobiliárias</title>
+    <!-- Incluindo o Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Definindo a fonte "Inter" para o corpo do texto e o fundo escuro */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Cinza muito escuro (Tailwind bg-gray-900) */
+        }
+        /* Estilização para as seções, para centralizar o conteúdo */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        /* Estilização para o menu mobile (inicialmente escondido) */
+        .mobile-menu {
+            display: none;
+        }
+        /* Media query para telas menores (mobile) */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                background-color: #2d3748; /* Cor escura para o menu mobile */
+                position: absolute;
+                top: 64px; /* Altura do header */
+                left: 0;
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .nav-menu a {
+                padding: 1rem;
+                border-bottom: 1px solid #4a5568;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+        /* Estilização para o botão flutuante do WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-300">
+
+    <!-- Header do site: Fixo no topo e responsivo -->
+    <header class="bg-gray-900 shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container flex justify-between items-center py-4">
+            <!-- Logo da empresa -->
+            <div class="text-2xl font-bold text-white">
+                <a href="#home">G &amp; L Soluções Imobiliárias</a>
+            </div>
+
+            <!-- Menu de navegação para desktop -->
+            <nav class="hidden md:flex space-x-6 nav-menu">
+                <a href="#home" class="hover:text-white transition duration-300">Home</a>
+                <a href="#servicos" class="hover:text-white transition duration-300">Serviços</a>
+                <a href="#sobre" class="hover:text-white transition duration-300">Sobre Nós</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <!-- Botão do menu mobile (hamburguer) -->
+            <button class="md:hidden mobile-menu-toggle" id="mobile-menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="mt-16">
+        <!-- Seção de Destaque (Hero Section) -->
+        <section id="home" class="container text-center py-20 bg-gray-800 rounded-lg shadow-inner">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                Soluções Imobiliárias completas para você
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Despachante Imobiliário, Regularização de Imóveis e Financiamento. Seu sonho da casa própria mais perto.
+            </p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20voc%C3%AA%C2%B9s." target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-500 transition duration-300 transform hover:scale-105">
+                Fale conosco
+            </a>
+        </section>
+
+        <!-- Seção de Serviços -->
+        <section id="servicos" class="container py-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-10">Nossos Serviços</h2>
+            <!-- Layout de cartões para os serviços -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço: Despachante Imobiliário -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="text-white text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Despachante Imobiliário</h3>
+                    <p class="text-gray-400">Assessoria completa em processos burocráticos ligados a imóveis, garantindo agilidade e segurança.</p>
+                </div>
+
+                <!-- Serviço: Regularização de Imóveis -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="text-white text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Regularização de Imóveis</h3>
+                    <p class="text-gray-400">Organização e legalização de documentação, escritura, matrícula e registros.</p>
+                </div>
+
+                <!-- Serviço: Financiamento Imobiliário -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="text-white text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V5m0 2v-1m0 5a3 3 0 01-3 3m0-6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Financiamento Imobiliário</h3>
+                    <p class="text-gray-400">Suporte na análise, orientação e intermediação para aprovação de crédito habitacional.</p>
+                </div>
+
+                <!-- Serviço: Transferência de Imóveis -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="text-white text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Transferência de Imóveis</h3>
+                    <p class="text-gray-400">Acompanhamento e regularização em casos de compra, venda ou doação.</p>
+                </div>
+
+                <!-- Serviço: Certidões e Documentações -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="text-white text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Certidões e Documentações</h3>
+                    <p class="text-gray-400">Emissão e atualização de certidões necessárias para negociações imobiliárias.</p>
+                </div>
+
+                <!-- Serviço: Consultoria Especializada -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="text-white text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.462 9.28 5 7.5 5S4.168 5.462 3 6.253m9 0c1.168.791 2.719 1.253 4.5 1.253s3.332-.462 4.5-1.253m-9 0V2.253A.25.25 0 0112.25 2h.5a.25.25 0 01.25.253v4.001M12 18.753V21m-9-3.753A2.25 2.25 0 004.5 18s2.25 1.5 7.5 1.5c5.25 0 7.5-1.5 7.5-1.5a2.25 2.25 0 00-1.5-1.875m-9 0h9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Consultoria Especializada</h3>
+                    <p class="text-gray-400">Orientação personalizada para cada etapa do processo imobiliário.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre" class="container py-20 bg-gray-800 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-center text-white mb-10">Sobre Nós</h2>
+            <p class="text-center text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Na G & L Soluções Imobiliárias, trabalhamos para simplificar processos e aproximar você do seu sonho da casa própria. Atuamos como despachantes imobiliários, oferecendo soluções em regularização de imóveis, financiamento e assessoria completa em todas as etapas do processo.
+                <br><br>
+                Nosso compromisso é garantir agilidade, segurança e transparência, cuidando da burocracia para que você tenha tranquilidade. Acreditamos que cada cliente merece um atendimento personalizado, com foco em transformar objetivos em conquistas reais.
+            </p>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="container py-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-10">Contato</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- Informações de contato -->
+                <div class="text-center md:text-left text-gray-300 space-y-4 max-w-lg">
+                    <p>
+                        Entre em contato e tire suas dúvidas. Estamos prontos para ajudar você em cada etapa do processo imobiliário.
+                    </p>
+                    <ul class="space-y-2 text-left inline-block">
+                        <li><strong>📍 Endereço:</strong> Av. Visc. de Jequitinhonha, 209 - Boa Viagem, Recife - PE, 51021-190</li>
+                        <li><strong>📞 Telefone/WhatsApp:</strong> 81 98806-3397</li>
+                        <li><strong>📧 E-mail:</strong> geovanebra@gmail.com</li>
+                        <li><strong>⏰ Horário de Atendimento:</strong> Segunda a Sexta, 8h às 18h</li>
+                    </ul>
+                    <p class="mt-4">
+                        Clique no botão abaixo e fale diretamente conosco pelo WhatsApp.
+                    </p>
+                    <!-- Botão "Falar no WhatsApp" -->
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20voc%C3%AA%C2%B9s." target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-500 transition duration-300 transform hover:scale-105">
+                        Falar no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Espaço para o mapa do Google Maps -->
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold text-center text-white mb-4">Nossa Localização</h3>
+                    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.447654395283!2d-34.90435163043359!3d-8.122788771843675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1fb3a018a6dd%3A0xf53a799335f7925b!2sAv.%20Visc.%20de%20Jequitinhonha%2C%20209%20-%20Boa%20Viagem%2C%20Recife%20-%20PE%2C%2051021-190!5e0!3m2!1sen!2sbr!4v1755207582529!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+        <p>&copy; 2025 G&amp;L Soluções Imobiliárias. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5581988063397?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-14 h-14 rounded-full shadow-lg hover:scale-110 transition">
+    </a>
+
+    <!-- JavaScript para o menu mobile -->
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            // Alterna a classe `hidden` para mostrar/esconder o menu
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
